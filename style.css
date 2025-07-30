@@ -5,7 +5,7 @@
 /* App.vue style */
 :root{
   --orange : #ffa600;
-  --shadow : #ffd9938e ;
+  --shadow : #ffa60094 ;
   --whit : #fff;
   --gray : #b1b1b1c6 ;
 }
@@ -47,8 +47,7 @@
   height: 60px;
   padding-left: 2%;
   padding-right: 2%;
-  box-shadow: 5px 6px 7px var(--shadow);
-  border-radius: 0px 0px 8px 8px;
+  border-bottom: 1px solid var(--orange);
 }
 .logo{
   font-size: xx-large;
@@ -87,6 +86,7 @@
   width: 50%;
   height: 100%;
   background-color: var(--orange);
+  z-index: 1;
 }
 .close{
   cursor: pointer;
@@ -116,6 +116,7 @@
   background-color: var(--gray);
   overflow-y:scroll;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 .box{
@@ -125,6 +126,58 @@
   border-radius: 6px;
   background-color: var(--whit);
 }
+
+/* About.vue style */
+
+.header{
+  width: 100%;
+  height: 550px;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url(./src/img/young-bearded-man-with-round-glasses-denim-overalls.jpg);
+}
+
+.headerText{
+  width: 40%;
+  margin: auto;
+  color: var(--orange);
+  position: relative;
+  top: 30%;
+  left: -20%;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.text{
+  text-shadow:  8px 7px 6px var(--shadow);
+  display: block;
+}
+
+.titr{
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.homeIcons{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: -4%;
+  width: 100%;
+}
+
+#left,#right{
+  background-color: var(--gray);
+  border-radius: 100%;
+}
+/* media query */
 
 @media screen and (max-width: 1100px) {
   #bascketBar{
@@ -136,6 +189,20 @@
   #bascketBar{
     width: 45%;
   }
+  .header{
+    height: 400px;
+  }
+  .titr{
+  font-size: 30px;
+  font-weight: 900;
+}
+.headerText{
+  width: 60%;
+}
+.p{
+  font-size: 15px;
+  font-weight: 600;
+}
 }
 
 @media screen and (max-width: 550px) {
@@ -148,16 +215,14 @@
   #bascketBar{
     width: 55%;
   }
+  .titr{
+  font-size: 25px;
+  font-weight: 900;
 }
 
-/* About.vue style */
-
-.header{
-  width: 100%;
-  height: 550px;
-  background-clip: content-box;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  background-image: url(./src/img/modern-stationary-collection-arrangement.jpg);
+.p{
+  font-size: 10px;
+  font-weight: 600;
 }
+}
+
