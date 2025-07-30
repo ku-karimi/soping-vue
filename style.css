@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+
+/* App.vue style */
+:root{
+  --orange : #ffa600;
+  --shadow : #ffd9938e ;
+  --whit : #fff;
+  --gray : #b1b1b1c6 ;
+}
+  /* menu open-close animation */
+@keyframes in {
+  100%{
+    opacity: 0.7;
+    filter: none;
+  }
+}
+@keyframes out {
+  0%{
+    opacity: 0.7;
+    filter: blur(5);
+  }
+  50%{
+    opacity: 0.5;
+    filter: blur(3);
+  }
+  100%{
+    opacity: 0;
+    filter: none;
+  }
+}
+  /* main nav bar and it's menu style */
+.content{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.nav-bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-left: 2%;
+  padding-right: 2%;
+  box-shadow: 5px 6px 7px var(--shadow);
+  border-radius: 0px 0px 8px 8px;
+}
+.logo{
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 900;
+  color: var(--orange);
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-left: 35%;
+}
+.links .links-router{
+    color: var(--orange);
+    font-size: 17px;
+    font-weight: 400;
+}
+.links-router:hover{
+    transition: all 0.5s;
+    font-size: 20px;
+    font-weight: 600;
+}
+.icon{
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+}
+#menu{
+  display: none;
+}
+#menu-bar{
+  display: block;
+  opacity: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: var(--orange);
+}
+.close{
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 10px;
+  color: var(--whit);
+  font-size: 18px;
+  font-weight: 700;
+}
+.links2{
+  padding-left: 10px;
+  display: block;
+  color: var(--whit);
+  font-size: 18px;
+  font-weight: 700;
+} 
+
+#bascketBar{
+  padding: 1px;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--gray);
+  overflow-y:scroll;
+  overflow-x: hidden;
+}
+
+.box{
+  width: 95%;
+  height: auto;
+  margin: auto;
+  border-radius: 6px;
+  background-color: var(--whit);
+}
+
+@media screen and (max-width: 1100px) {
+  #bascketBar{
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #bascketBar{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #menu{
+    display: inline;
+  }
+  .links{
+    display: none;
+  }
+  #bascketBar{
+    width: 55%;
+  }
+}
+
+/* About.vue style */
+
+.header{
+  width: 100%;
+  height: 550px;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url(./src/img/modern-stationary-collection-arrangement.jpg);
+}
