@@ -82,6 +82,9 @@ function bascketHandeler(){
     <div id="bascketBar" ref="bascketBar">
         <div class="close" @click="bascketHandeler">X</div>
         <div class="box"></div>
+        <div class="btnBox">
+          <button class="Bascketbtn">Pay</button>
+        </div>
     </div>
     <!-- view routers content -->
     <RouterView></RouterView>

@@ -1,13 +1,13 @@
 <template>
-  <h1>Contact Page</h1>
+  <div class="bodyContact">
+    <Form></Form>
+    
+  </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import Form from './formChild.vue';
 </script>
 
 <style>
-
 </style>
