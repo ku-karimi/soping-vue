@@ -1,71 +1,31 @@
 <template>
   <div class="box">
-    <!-- Name Field -->
     <div class="partBox">
       <label for="name">Your Name:</label>
-      <input 
-        @blur="validateName" 
-        type="text" 
-        name="name" 
-        maxlength="20" 
-        id="name" 
-        placeholder="Mr.Karimi" 
-        v-model="formData.name"
-      >
+      <input @blur="validateName" type="text" name="name" maxlength="20" id="name" placeholder="Mr.Karimi" v-model="formData.name">
       <span class="error-message">{{ nameError }}</span>
     </div>
 
-    <!-- Email Field -->
     <div class="partBox">
       <label for="email">Email:</label>
-      <input 
-        @blur="validateEmail" 
-        type="email" 
-        name="email" 
-        id="email" 
-        placeholder="Karimi@gmail.com" 
-        v-model="formData.email"
-      >
+      <input @blur="validateEmail" type="email" name="email" id="email" placeholder="Karimi@gmail.com" v-model="formData.email">
       <span class="error-message">{{ emailError }}</span>
     </div>
 
-    <!-- Password Field -->
     <div class="partBox">
       <label for="pass">Password:</label>
-      <input 
-        @blur="validatePassword" 
-        type="password" 
-        name="pass" 
-        id="pass" 
-        placeholder="******" 
-        v-model="formData.pass"
-      >
+      <input @blur="validatePassword" type="password" name="pass" id="pass" placeholder="******" v-model="formData.pass">
       <span class="error-message">{{ passError }}</span>
     </div>
 
-    <!-- Description Field -->
     <div class="partBox">
       <label for="boxText">Description:</label>
-      <input 
-        @blur="validateDescription" 
-        type="text" 
-        name="boxText" 
-        maxlength="300" 
-        id="boxText" 
-        placeholder="Hello Need Help....." 
-        v-model="formData.descript"
-      >
+      <textarea @blur="validateDescription" type="textarea" name="boxText" maxlength="150" id="boxText" placeholder="Hello Need Help....." v-model="formData.descript" rows="4" cols="50"></textarea>
       <span class="error-message">{{ descriptError }}</span>
     </div>
 
     <div class="partBtn">
-      <button 
-        @click="submitHandler" 
-        class="formBtn"
-        :disabled="!isFormValid"
-      >
-        Submit
-      </button>
+      <button @click="submitHandler" class="formBtn" :disabled="!isFormValid">Submit</button>
     </div>
   </div>
 </template>
@@ -169,7 +129,3 @@ function submitHandler() {
   descriptError.value = '';
 }
 </script>
-
-<style>
-
-</style>
