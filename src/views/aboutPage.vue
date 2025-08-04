@@ -29,7 +29,7 @@
           <a href="tel:+980 000 000 000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quod!</a>
         </div>
       </div>
-      <div class="aboutcard">
+      <div class="aboutcard card3">
         <div class="imgCard">
           <img src="../img/standard-quality-control-collage-concept.jpg" alt="img About"/>
         </div>

@@ -1,37 +1,35 @@
-*{
+* {
   box-sizing: border-box;
 }
 
 /* App.vue style */
-:root{
-  --orange : #ffa600;
-  --shadow : #ffa60094 ;
-  --whit : #fff;
-  --gray : #b1b1b1c6 ;
+:root {
+  --orange: #ffa600;
+  --shadow: #ffa60094;
+  --whit: #fff;
+  --gray: #b1b1b1c6;
 }
-  /* animations */
+/* animations */
 @keyframes in {
-  100%{
+  100% {
     opacity: 1;
     filter: none;
+    visibility: visible;
   }
 }
 @keyframes out {
-  0%{
-    opacity: 0.7;
-    filter: blur(5);
-  }
-  50%{
+  50% {
     opacity: 0.5;
-    filter: blur(3);
+    filter: blur(3px);
   }
-  100%{
+  100% {
     opacity: 0;
-    filter: none;
+    filter: blur(0);
   }
 }
-  /* main nav bar and it's menu style */
-.content{
+
+/* main nav bar and it's menu style */
+.content {
   display: block;
   width: 100%;
   height: 100%;
@@ -39,7 +37,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
-.nav-bar{
+.nav-bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -49,38 +47,39 @@
   padding-right: 2%;
   border-bottom: 1px solid var(--orange);
 }
-.logo{
+.logo {
   font-size: xx-large;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 900;
   color: var(--orange);
 }
-.links{
-    display: flex;
-    justify-content: space-evenly;
-    width: 300px;
-    margin-left: 35%;
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-left: 35%;
 }
-.links .links-router{
-    color: var(--orange);
-    font-size: 17px;
-    font-weight: 400;
+.links .links-router {
+  color: var(--orange);
+  font-size: 17px;
+  font-weight: 400;
 }
-.links-router:hover{
-    transition: all 0.5s;
-    font-size: 20px;
-    font-weight: 600;
+.links-router:hover {
+  transition: all 0.5s;
+  font-size: 20px;
+  font-weight: 600;
 }
-.icon{
+.icon {
   cursor: pointer;
   width: 43px;
   height: 43px;
 }
-#menu{
+#menu {
   display: none;
 }
-#menu-bar{
+#menu-bar {
   display: block;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   width: 50%;
@@ -88,7 +87,7 @@
   background-color: var(--orange);
   z-index: 1;
 }
-.close{
+.close {
   cursor: pointer;
   display: flex;
   justify-content: end;
@@ -98,40 +97,41 @@
   font-size: 18px;
   font-weight: 700;
 }
-.links2{
+.links2 {
   padding-left: 10px;
   display: block;
   color: var(--whit);
   font-size: 18px;
   font-weight: 700;
-} 
+}
 
-#bascketBar{
+#bascketBar {
   padding: 1px;
   display: block;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   width: 25%;
   height: 100%;
   background-color: var(--gray);
-  overflow-y:scroll;
+  overflow-y: scroll;
   overflow-x: hidden;
   z-index: 1;
 }
 
-.box{
+.box {
   width: 95%;
   height: auto;
   margin: auto;
   border-radius: 6px;
   background-color: var(--whit);
 }
-.btnBox{
+.btnBox {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.Bascketbtn{
+.Bascketbtn {
   text-align: center;
   background-color: var(--orange);
   width: 80%;
@@ -144,79 +144,122 @@
   border-radius: 8px;
 }
 
+/* Home.vue style */
+.headerLinck{
+  margin: 0px;
+  padding: 0px;
+}
+.headerHome {
+  width: 100%;
+  height: 500px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(./src/img/chiled-header.jpg);
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+}
+.headerNav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  z-index: 3;
+  position: absolute;
+  margin-top: 5px;
+}
+.scrollIcons {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  padding-top: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.scrollIcons.active {
+  border: 2px solid black;
+}
+
 /* About.vue style */
-.aboutBody{
+.aboutBody {
   overflow: hidden;
   background-image: url(./src/img/fast-fashion-vs-slow-sustainable-fashion.jpg);
   width: 100%;
   height: 100%;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
-.section1{
+.section1 {
   width: 100%;
   display: flex;
   justify-content: end;
+  flex-wrap: wrap;
   margin-left: -30px;
 }
-.section2{
+.section2 {
   margin-left: 20px;
   justify-content: start;
 }
-.cardSection{
+.cardSection {
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
   width: 40%;
   background-color: #ffffff70;
   border-radius: 10px;
-  box-shadow: 4px 6px 4px ;
+  box-shadow: 4px 6px 4px;
   border: 1px solid rgba(0, 0, 0, 0.557);
 }
-.h{
+.h {
   color: var(--whit);
   font-size: 22px;
   font-weight: 700;
   text-shadow: 3px 4px 6px #000;
 }
-.p{
+.p {
   text-align: justify;
   text-shadow: 3px 7px 8px #000;
 }
-.aboutCards{
+.aboutCards {
   margin: auto;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.aboutcard{
-  width: 27%;
+.aboutcard {
+  width: 30%;
   background-color: #ffffffb5;
   border: 1px solid #00000055;
   border-radius: 10px;
   box-shadow: 3px 6px 6px;
-  padding: 20px;
+  padding: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.imgCard img{
+.imgCard img {
   border: 1px solid black;
   width: 100%;
   height: auto;
   box-shadow: 2px 2px 10px;
   margin-bottom: 6px;
+  border-radius: 10px;
 }
-.textCard a{
+.textCard a {
   color: #000;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   text-shadow: 3px 3px 7px;
 }
 
 /* contact us */
-.bodyContact{
+.bodyContact {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -224,7 +267,7 @@
   background-position: top;
   background-size: cover;
 }
-.box{
+.box {
   width: 40%;
   padding: 5px;
   margin: auto;
@@ -232,10 +275,10 @@
   top: 35px;
   background: #ffffff70;
 }
-.partBox{
+.partBox {
   width: 100%;
 }
-label{
+label {
   position: relative;
   left: 26px;
   display: block;
@@ -243,7 +286,8 @@ label{
   font-size: 22px;
   font-weight: 800;
 }
-input,textarea{
+input,
+textarea {
   position: relative;
   background-color: #ffffff7b;
   left: 50px;
@@ -256,21 +300,22 @@ input,textarea{
   box-shadow: 3px 6px 8px gray;
   font-weight: 700;
 }
-#boxText{
+#boxText {
   height: 100px;
 }
-input:focus , textarea:focus{
+input:focus,
+textarea:focus {
   background-color: var(--shadow);
   color: var(--whit);
   box-shadow: 3px 3px 4px var(--orange);
   outline: none;
 }
-.partBtn{
+.partBtn {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.formBtn{
+.formBtn {
   width: 60%;
   height: 40px;
   background-color: var(--orange);
@@ -283,7 +328,7 @@ input:focus , textarea:focus{
   color: var(--whit);
   cursor: pointer;
 }
-span{
+span {
   display: block;
   position: relative;
   left: 20px;
@@ -292,129 +337,114 @@ span{
   color: rgb(255, 98, 0);
 }
 /* media query */
-
 @media screen and (max-width: 1100px) {
-  #bascketBar{
+  #bascketBar {
     width: 35%;
   }
-.cardSection{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 60%;
+  .cardSection {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 60%;
+  }
 }
-}
-
 @media screen and (max-width: 850px) {
-  #bascketBar{
+  #bascketBar {
     width: 45%;
   }
-  .header{
+  .header {
     height: 400px;
   }
-  .titr{
-  font-size: 30px;
-  font-weight: 900;
+  .titr {
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .headerText {
+    width: 60%;
+  }
+  .p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .box {
+    width: 60%;
+  }
+  .aboutcard {
+    width: 48%;
+  }
+  .card3 {
+    width: 70%;
+  }
 }
-.headerText{
-  width: 60%;
-}
-.p{
-  font-size: 15px;
-  font-weight: 600;
-}
-.box{
-  width: 60%;
-}
-.aboutcard{
-  width: 32%;
-  padding: 2px;
-  box-shadow: 1px 3px 10px;
-}
-.imgCard img{
-  border-radius: 6px;
-  margin-bottom: 1px;
-}
-.textCard a{
-  color: #000;
-  font-size: 10px;
-  font-weight: 200;
-  text-shadow: 3px 3px 7px;
-}
-}
-
 @media screen and (max-width: 550px) {
-  #menu{
+  #menu {
     display: inline;
   }
-  .links{
+  .links {
     display: none;
   }
-  #bascketBar{
+  #bascketBar {
     width: 55%;
   }
-  .titr{
-  font-size: 25px;
-  font-weight: 900;
-}
+  .titr {
+    font-size: 25px;
+    font-weight: 900;
+  }
 
-.p{
-  font-size: 10px;
-  font-weight: 600;
-}
-.box{
-  width: 80%;
-}
-input{
-  left: 30px;
-}
-label{
-left: 20px;
-}
-span{
-  left: 5px;
-  font-size: 17px;
-  font-weight: 600;
-}
+  .p {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .box {
+    width: 80%;
+  }
+  input {
+    left: 30px;
+  }
+  label {
+    left: 20px;
+  }
+  span {
+    left: 5px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .headerHome {
+    height: 400px;
+  }
 }
 @media screen and (max-width: 400px) {
-  .box{
+  .box {
     top: 0px;
   }
-  #boxText{
+  #boxText {
     height: 80px;
   }
-  .formBtn{
+  .formBtn {
     height: 30px;
   }
-  span{
+  span {
     font-size: 14px;
   }
-  label{
+  label {
     font-size: 18px;
   }
-  .box{
+  .box {
     width: 100%;
     height: 100%;
   }
-  .section1{
+  .section1 {
     margin-left: -14px;
   }
-  .section2{
+  .section2 {
     margin-left: 10px;
   }
-.cardSection{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  width: 80%;
-}
-.textCard a{
-  color: #000;
-  font-size: 10px;
-  font-weight: 200;
-  text-shadow: 3px 3px 7px;
-}
+  .cardSection {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 80%;
+  }
 }
