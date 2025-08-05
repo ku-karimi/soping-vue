@@ -145,19 +145,18 @@
 }
 
 /* Home.vue style */
-.headerLinck{
+.headerLinck {
   margin: 0px;
   padding: 0px;
 }
 .headerHome {
   width: 100%;
-  height: 500px;
+  height: 530px;
   background-position: top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: local;
   background-size: cover;
   background-image: url(./src/img/chiled-header.jpg);
-  -webkit-overflow-scrolling: touch;
   cursor: pointer;
 }
 .headerNav {
@@ -165,22 +164,48 @@
   justify-content: center;
   width: 100%;
   height: 25px;
-  z-index: 3;
   position: absolute;
-  margin-top: 5px;
+  margin-top: -45px;
 }
 .scrollIcons {
   display: block;
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  padding-top: 4px;
   margin-left: 5px;
   cursor: pointer;
   border: 1px solid black;
 }
 .scrollIcons.active {
   border: 2px solid black;
+}
+.scrollSection {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.scrollList {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+  background-color: var(--orange);
+  border-radius: 0px 60px 0px 0px;
+  width: fit-content; 
+  min-width: 100%; 
+  gap: 20px; }
+
+.itemBody {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #9e9e9eb8;
+  box-shadow: 5px 10px 10px;
+  background-color: var(--whit);
+  flex-shrink: 0; 
 }
 
 /* About.vue style */

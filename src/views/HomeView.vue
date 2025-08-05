@@ -7,10 +7,12 @@
     <i v-for="item in items" :key="item" class="scrollIcons" :class="{ active: item == index }" @click="changeHeaderHandeler(item)"></i>
   </nav>
   <!-- body section -->
+   <BodyHome/>
 </template>
 
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
+import BodyHome from './bodyHome.vue'
 // variabels
 const items = reactive([0, 1, 2])
 const head = ref(null)
