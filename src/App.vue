@@ -147,7 +147,9 @@ function bascketHandeler() {
     </div>
     <div id="bascketBar" ref="bascketBar">
       <div class="close" @click="bascketHandeler">X</div>
-      <div class="box"></div>
+      <span class="spanBascket">
+        Your bascket is empty 
+      </span>
       <div class="btnBox">
         <button class="Bascketbtn">Pay</button>
       </div>
@@ -158,8 +160,7 @@ function bascketHandeler() {
 </template>
 
 <style scoped>
-ز
-  /* border botton for activ router */
+/* border botton for activ router */
 .router-link-active,
 .router-link-exact-active {
   border-bottom: 1px solid rgb(255, 211, 89);

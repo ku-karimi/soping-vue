@@ -8,6 +8,3 @@
 <script setup>
 import Form from './formChild.vue';
 </script>
-
-<style>
-</style>

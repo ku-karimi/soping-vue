@@ -129,3 +129,83 @@ function submitHandler() {
   descriptError.value = '';
 }
 </script>
+
+<style>
+.bodyContact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(./src/img/young-woman-surrounded-by-piles-clothes.jpg);
+  background-position: top;
+  background-size: cover;
+}
+.box {
+  width: 40%;
+  padding: 5px;
+  margin: auto;
+  position: relative;
+  top: 35px;
+  background: #ffffff70;
+}
+.partBox {
+  width: 100%;
+}
+label {
+  position: relative;
+  left: 26px;
+  display: block;
+  color: var(--orange);
+  font-size: 22px;
+  font-weight: 800;
+}
+input,
+textarea {
+  position: relative;
+  background-color: #ffffff7b;
+  left: 50px;
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  width: 78%;
+  height: 30px;
+  color: var(--orange);
+  padding-left: 15px;
+  box-shadow: 3px 6px 8px gray;
+  font-weight: 700;
+}
+#boxText {
+  height: 100px;
+}
+input:focus,
+textarea:focus {
+  background-color: var(--shadow);
+  color: var(--whit);
+  box-shadow: 3px 3px 4px var(--orange);
+  outline: none;
+}
+.partBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formBtn {
+  width: 60%;
+  height: 40px;
+  background-color: var(--orange);
+  border: none;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 17px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: var(--whit);
+  cursor: pointer;
+}
+span {
+  display: block;
+  position: relative;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 98, 0);
+}
+</style>

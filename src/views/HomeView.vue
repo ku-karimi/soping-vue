@@ -20,9 +20,9 @@ const index = ref(0)
 const linck = ref('linck1')
 // background img addres and header lincks array
 const listHeader = reactive([
-  { img: './src/img/chiled-header.jpg', linck: 'linck1' },
-  { img: './src/img/man-header.jpg', linck: 'linck2' },
-  { img: './src/img/woman-header.jpg', linck: 'linck2' },
+  { img: './src/img/chiled-header.jpg', linck: '#' },
+  { img: './src/img/man-header.jpg', linck: '#' },
+  { img: './src/img/woman-header.jpg', linck: '#' },
 ])
 // change background
 function changeBackground() {
@@ -37,7 +37,44 @@ function changeHeaderHandeler(item) {
 }
 // time out change background
 onMounted(() => {
-  setInterval(changeBackground,4000)
+  setInterval(changeBackground,5000)
 })
 
 </script>
+
+<style scoped>
+.headerLinck {
+  margin: 0px;
+  padding: 0px;
+}
+.headerHome {
+  width: 100%;
+  height: 530px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  background-image: url(./src/img/chiled-header.jpg);
+  cursor: pointer;
+}
+.headerNav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  margin-top: -45px;
+}
+.scrollIcons {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.scrollIcons.active {
+  border: 2px solid black;
+}
+</style>
